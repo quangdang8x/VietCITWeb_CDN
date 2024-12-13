@@ -77,8 +77,8 @@
   // Khởi động các hiệu ứng
   window.startNoelEffects = function () {
     const today = new Date();
-    const startNoel = new Date(today.getFullYear(), 12, 10); // 10 tháng 12
-    const endNoel = new Date(today.getFullYear(), 12, 26); // 26 tháng 12
+    const startNoel = new Date(today.getFullYear(), 11, 10); // 10 tháng 12
+    const endNoel = new Date(today.getFullYear(), 11, 26); // 26 tháng 12
 
     // Chỉ kích hoạt hiệu ứng trong khoảng thời gian Noel
     if (today >= startNoel && today <= endNoel) {
