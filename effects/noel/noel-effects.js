@@ -48,7 +48,7 @@
   function santaEffect() {
     const santa = document.createElement("img");
     santa.id = "santa";
-    santa.src = "https://quangdang8x.github.io/VietCITWeb_CDN/img/ogianoel.png";
+    santa.src = "https://quangdang8x.github.io/VietCITWeb_CDN/effects/noel/ogianoel.png";
     santa.alt = "Santa Claus";
     santa.style.position = "fixed";
     santa.style.top = "30%";
@@ -75,8 +75,15 @@
   }
 
   // Khởi động các hiệu ứng
-  window.startPWAEffects = function (options = {}) {
-    if (options.snow) snowEffect();
-    if (options.santa) santaEffect();
+  window.startNoelEffects = function () {
+    const today = new Date();
+    const startNoel = new Date(today.getFullYear(), 12, 10); // 10 tháng 12
+    const endNoel = new Date(today.getFullYear(), 12, 26); // 26 tháng 12
+
+    // Chỉ kích hoạt hiệu ứng trong khoảng thời gian Noel
+    if (today >= startNoel && today <= endNoel) {
+      snowEffect();
+      santaEffect();
+    }
   };
 })();
