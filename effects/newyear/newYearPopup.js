@@ -42,6 +42,7 @@ class NewYearPopup {
         popup.style.zIndex = '9999';
         popup.style.textAlign = 'center';
         popup.style.animation = 'shake 0.5s infinite';
+        popup.id = 'popup-container';
 
         // Add popup content
         const img = document.createElement('img');
@@ -74,7 +75,7 @@ class NewYearPopup {
 
         document.body.appendChild(overlay);
 
-        // Add CSS animation
+        // Add animations
         //this.addShakeAnimation();
         this.addGlowEffect();
     }
