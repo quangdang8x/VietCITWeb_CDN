@@ -75,7 +75,8 @@ class NewYearPopup {
         document.body.appendChild(overlay);
 
         // Add CSS animation
-        this.addShakeAnimation();
+        //this.addShakeAnimation();
+        this.addGlowEffect();
     }
 
     // Close the popup
@@ -97,6 +98,23 @@ class NewYearPopup {
                 50% { transform: translate(-50%, -48%) rotate(5deg); }
                 75% { transform: translate(-52%, -50%) rotate(-5deg); }
                 100% { transform: translate(-50%, -50%) rotate(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+
+    // Add glow effect
+    addGlowEffect() {
+        const style = document.createElement('style');
+        style.type = 'text/css';
+        style.innerHTML = `
+            @keyframes glow {
+                0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+                50% { box-shadow: 0 0 20px rgba(255, 255, 255, 1); }
+                100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            }
+            #popup-container {
+                animation: glow 2s infinite;
             }
         `;
         document.head.appendChild(style);
