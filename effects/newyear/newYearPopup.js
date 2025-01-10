@@ -137,7 +137,7 @@ class NewYearPopup {
 // Configuration for the popup
 const popupOptions = {
     startDate: '2024-12-20', // Start showing popup
-    endDate: '2025-01-02',   // End showing popup
+    endDate: '2025-02-10',   // End showing popup
     imageUrl: 'https://quangdang8x.github.io/VietCITWeb_CDN/effects/newyear/hpny_2025.jpg', // URL of the popup image
 };
 
